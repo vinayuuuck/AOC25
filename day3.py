@@ -10,7 +10,6 @@ for match in matches:
   mulsum += a*b
 print(mulsum)
 
-#matches2 = re.findall("don\'t\|mul\(\d{1,3}\,\d{1,3}\)|do\(\)", data)
 matches2 = re.findall("mul\(\d{1,3}\,\d{1,3}\)|do\(\)|don\'t\(\)", data)
 mulsum = 0
 doflag = True
