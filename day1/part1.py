@@ -4,13 +4,11 @@ def main(rotations):
     for r in rotations:
         dir, amt = r[0], int(r[1:])
         if dir == "L":
-            rem = (current - amt) % 100
-            q = amt // 100
-            current = rem
+            current = (current - amt) % 100
         else:
-            rem = (current + amt) % 100
-            q = amt // 100
-            current = rem
+            current = (current + amt) % 100
+        if current == 0:
+            onzero += 1
 
     return onzero
 
